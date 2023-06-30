@@ -16,6 +16,7 @@ namespace TicTacToe
     public partial class MainMenu : Form
     {
         private SoundPlayer player;
+        
 
         public MainMenu()
         {
@@ -44,6 +45,15 @@ namespace TicTacToe
         {
             Button button = sender as Button;
             button.BackgroundImage = null;
+        }
+
+        private void btnVsCpu_Click(object sender, EventArgs e)
+        {
+            Game game = new Game();
+            if(game.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
