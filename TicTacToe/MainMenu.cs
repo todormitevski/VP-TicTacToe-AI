@@ -55,5 +55,14 @@ namespace TicTacToe
 
             }
         }
+
+        private void btnVsPlayer_Click(object sender, EventArgs e)
+        {
+            PlayerVsPlayer PVP = new PlayerVsPlayer();
+            if(PVP.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
     }
 }

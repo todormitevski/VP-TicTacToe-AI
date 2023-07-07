@@ -7,12 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicTacToe.Properties;
 
 namespace TicTacToe
 {
   
     public partial class Game : Form
     {
+        System.Media.SoundPlayer playerSound = new System.Media.SoundPlayer(Resources.click1);
+
+        public int PlayerScore { get; set; } = 0;
+        public int ComputerScore { get; set; } = 0;
+        public int Draws { get; set; } = 0;
+
+        public bool isSpaceFree { get; set; } = false;
         public bool PlayerTurn { get; set; } = true;
         Dictionary<int, char> board = new Dictionary<int, char>
         {
@@ -37,14 +45,6 @@ namespace TicTacToe
             }
         }
 
-        public void DisableAllButtons()
-        {
-            for (int i = 1; i <= boardButton.Count; i++)
-            {
-                boardButton[i].Enabled = false;
-            }
-        }
-
         public Game()
         {
             InitializeComponent();
@@ -57,11 +57,8 @@ namespace TicTacToe
             boardButton.Add(6, button6);
             boardButton.Add(7, button7);
             boardButton.Add(8, button8);
-            boardButton.Add(9, button9);
-           
+            boardButton.Add(9, button9);  
         }
-
-      
 
         public bool SpaceIsFree(int position)
         {
@@ -71,7 +68,6 @@ namespace TicTacToe
             return false;
         }
 
-       
         public void InsertLetter(char letter, int position)
         {
 
@@ -79,63 +75,59 @@ namespace TicTacToe
             {
                 board[position] = letter;
                 boardButton[position].Text = letter.ToString();
+                
+                
                 boardButton[position].Enabled = false;
-                
-                //PrintBoard(board);
-                
+                isSpaceFree = true;
+
 
                 if (CheckDraw())
                 {
+                    
+
                     DialogResult result = MessageBox.Show("Draw! Play again?", "Game Over", MessageBoxButtons.OKCancel);
                     if (result == DialogResult.OK)
                         restartGame();
                     else
                         Close();
 
+                    scoreLabel.Text = $"{PlayerScore} {++Draws} {ComputerScore}";
 
-                    return;
-                    //Environment.Exit(0);
+
+
+
                 }
 
                 if (CheckWin())
                 {
                     if (letter == 'X')
                     {
-                        label1.Text = "Bot wins";
                         DialogResult result = MessageBox.Show("Bot wins! Play again?", "Game Over", MessageBoxButtons.OKCancel);
                         if (result == DialogResult.OK)
                             restartGame();
                         else
                             Close();
+
+                        scoreLabel.Text = $"{PlayerScore} {Draws}   {++ComputerScore}";
                         
 
                     }
                     else
                     {
-                        label1.Text = "Player wins";
                         DialogResult result = MessageBox.Show("Player wins! Play again?", "Game Over", MessageBoxButtons.OKCancel);
                         if (result == DialogResult.OK)
                             restartGame();
                         else
                             Close();
-                       
-                        
 
-                        
+
+                        scoreLabel.Text = $"{++PlayerScore} {Draws}   {++ComputerScore}";
 
 
                     }
-
-                    //Environment.Exit(0);
                 }
             }
-            //else
-            //{
-            //    Console.WriteLine("Invalid position");
-            //    Console.WriteLine("Please enter a new position: ");
-            //    position = int.Parse(Console.ReadLine());
-            //    InsertLetter(letter, position);
-            //}
+       
         }
 
 
@@ -241,44 +233,25 @@ namespace TicTacToe
             return false;
         }
 
-        public void PlayerMove()
-        {
-            Console.WriteLine("Enter a position for 'O': ");
-            //int position = int.Parse(Console.ReadLine());
-            int position = 1;
-            button1.Enabled = false;
-            button1.BackColor = Color.MediumPurple;
-            button1.Text = "O";
-            InsertLetter(player, position);
-        }
+        int j= 0;
 
         int i = 0;
 
         private void PlayerMove(object sender, MouseEventArgs e)
-        {
-                           
-                var button = (Button)sender;
-
-                butonot = button.Name.ToCharArray();
-                int position = Int16.Parse(butonot[butonot.Length - 1].ToString());
-                label1.Text = position.ToString();
-                InsertLetter(player, position);
-                //char clickedButton
-                //currentPlayer = Player.X;
-                //button.Text = currentPlayer.ToString();
-                button.Enabled = false;
-                button.BackColor = Color.MediumPurple;
-                button.Text = "O";
-            //buttons.Remove(button);
-            ++i;
-            if(i != 5)
-            {
-                ComputerMove();
-
-            }
+        {     
+            var button = (Button)sender;
+            butonot = button.Name.ToCharArray();
+            int position = Int16.Parse(butonot[butonot.Length - 1].ToString());
+            button.BackColor = Color.Green;
+            button.Text = "O";
+            button.Enabled = false;
+            
+            playerSound.Play();
+            InsertLetter(player, position);
 
 
-
+               if(isSpaceFree)
+                    ComputerMove();
 
 
         }
@@ -307,9 +280,11 @@ namespace TicTacToe
                 }
             }
 
-            PlayerTurn = true;
+            boardButton[bestMove].BackColor = Color.Red;
 
             InsertLetter(computer, bestMove);
+
+
         }
 
 
@@ -328,16 +303,20 @@ namespace TicTacToe
                 board[key] = ' ';
             }
             i = 0;
-
+            isSpaceFree  = false;
             EnableAllButtons();
         }
 
         private void restart_Click(object sender, EventArgs e)
         {
             restartGame();
+            PlayerScore = 0;
+            Draws = 0;
+            ComputerScore = 0;
+            scoreLabel.Text = $"{PlayerScore} {Draws} {ComputerScore}";
         }
 
-      
+       
     }
 }
 
