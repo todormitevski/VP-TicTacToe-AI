@@ -87,7 +87,6 @@ namespace TicTacToe
             this.btnOptions.TabIndex = 1;
             this.btnOptions.Text = "Options";
             this.btnOptions.UseVisualStyleBackColor = true;
-            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             this.btnOptions.MouseEnter += new System.EventHandler(this.buttonsContainer_MouseEnter);
             this.btnOptions.MouseLeave += new System.EventHandler(this.buttonsContainer_MouseLeave);
             // 
