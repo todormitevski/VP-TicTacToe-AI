@@ -45,16 +45,16 @@ namespace TicTacToe
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gang of Three", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(96, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 54);
+            this.label1.Size = new System.Drawing.Size(293, 53);
             this.label1.TabIndex = 0;
             this.label1.Text = "TIC-TAC-TOE";
             // 
             // btnVsCpu
             // 
-            this.btnVsCpu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVsCpu.Font = new System.Drawing.Font("Gang of Three", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVsCpu.Location = new System.Drawing.Point(129, 171);
             this.btnVsCpu.Name = "btnVsCpu";
             this.btnVsCpu.Size = new System.Drawing.Size(227, 47);
@@ -67,7 +67,7 @@ namespace TicTacToe
             // 
             // btnVsPlayer
             // 
-            this.btnVsPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVsPlayer.Font = new System.Drawing.Font("Gang of Three", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVsPlayer.Location = new System.Drawing.Point(129, 233);
             this.btnVsPlayer.Name = "btnVsPlayer";
             this.btnVsPlayer.Size = new System.Drawing.Size(227, 47);
@@ -79,19 +79,20 @@ namespace TicTacToe
             // 
             // btnOptions
             // 
-            this.btnOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptions.Font = new System.Drawing.Font("Gang of Three", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOptions.Location = new System.Drawing.Point(129, 295);
             this.btnOptions.Name = "btnOptions";
             this.btnOptions.Size = new System.Drawing.Size(227, 47);
             this.btnOptions.TabIndex = 1;
             this.btnOptions.Text = "Options";
             this.btnOptions.UseVisualStyleBackColor = true;
+            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             this.btnOptions.MouseEnter += new System.EventHandler(this.buttonsContainer_MouseEnter);
             this.btnOptions.MouseLeave += new System.EventHandler(this.buttonsContainer_MouseLeave);
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Gang of Three", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(129, 357);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(227, 47);

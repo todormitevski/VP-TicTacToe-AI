@@ -274,13 +274,7 @@ namespace TicTacToe
             if(i != 5)
             {
                 ComputerMove();
-
             }
-
-
-
-
-
         }
 
         public void ComputerMove()
