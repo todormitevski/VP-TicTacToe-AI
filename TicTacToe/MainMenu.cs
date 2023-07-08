@@ -15,7 +15,7 @@ namespace TicTacToe
 {
     public partial class MainMenu : Form
     {
-        public SoundPlayer player;
+        private SoundPlayer player;
         
 
         public MainMenu()
@@ -32,11 +32,7 @@ namespace TicTacToe
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit the game?", "Exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            this.Close();
         }
 
         private void buttonsContainer_MouseEnter(object sender, EventArgs e)
@@ -60,20 +56,13 @@ namespace TicTacToe
             }
         }
 
-        private void btnOptions_Click(object sender, EventArgs e)
+        private void btnVsPlayer_Click(object sender, EventArgs e)
         {
-            Options options = new Options(this);
-            options.ShowDialog();
-        }
+            PlayerVsPlayer PVP = new PlayerVsPlayer();
+            if(PVP.ShowDialog() == DialogResult.OK)
+            {
 
-        public void musicOn()
-        {
-            player.PlayLooping();
-        }
-
-        public void musicOff()
-        {
-            player.Stop();
+            }
         }
     }
 }

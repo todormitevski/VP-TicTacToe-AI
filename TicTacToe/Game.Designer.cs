@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,115 +39,137 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.restart = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.scoreLabelText = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(27, 44);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(144, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 78);
+            this.button1.Size = new System.Drawing.Size(151, 136);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(122, 44);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(301, 39);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 78);
+            this.button2.Size = new System.Drawing.Size(151, 136);
             this.button2.TabIndex = 0;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(217, 44);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(458, 39);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 78);
+            this.button3.Size = new System.Drawing.Size(151, 136);
             this.button3.TabIndex = 0;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(27, 128);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(144, 181);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 78);
+            this.button4.Size = new System.Drawing.Size(151, 136);
             this.button4.TabIndex = 0;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(122, 128);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button5.Location = new System.Drawing.Point(301, 181);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 78);
+            this.button5.Size = new System.Drawing.Size(151, 136);
             this.button5.TabIndex = 0;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(217, 128);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button6.Location = new System.Drawing.Point(458, 181);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 78);
+            this.button6.Size = new System.Drawing.Size(151, 136);
             this.button6.TabIndex = 0;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(27, 212);
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button7.Location = new System.Drawing.Point(144, 323);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(89, 78);
+            this.button7.Size = new System.Drawing.Size(151, 136);
             this.button7.TabIndex = 0;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(122, 212);
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button8.Location = new System.Drawing.Point(301, 323);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(89, 78);
+            this.button8.Size = new System.Drawing.Size(151, 136);
             this.button8.TabIndex = 0;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(217, 212);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button9.Location = new System.Drawing.Point(458, 323);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(89, 78);
+            this.button9.Size = new System.Drawing.Size(151, 136);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PlayerMove);
             // 
             // restart
             // 
-            this.restart.Location = new System.Drawing.Point(136, 321);
+            this.restart.Location = new System.Drawing.Point(572, 484);
             this.restart.Name = "restart";
-            this.restart.Size = new System.Drawing.Size(75, 23);
+            this.restart.Size = new System.Drawing.Size(184, 65);
             this.restart.TabIndex = 1;
-            this.restart.Text = "button10";
+            this.restart.Text = "Restart";
             this.restart.UseVisualStyleBackColor = true;
             this.restart.Click += new System.EventHandler(this.restart_Click);
             // 
-            // label1
+            // scoreLabelText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 367);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.scoreLabelText.AutoSize = true;
+            this.scoreLabelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabelText.Location = new System.Drawing.Point(191, 472);
+            this.scoreLabelText.Name = "scoreLabelText";
+            this.scoreLabelText.Size = new System.Drawing.Size(350, 25);
+            this.scoreLabelText.TabIndex = 2;
+            this.scoreLabelText.Text = "PLAYER (O) TIE COMPUTER(X)";
+            // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(317, 501);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(60, 25);
+            this.scoreLabel.TabIndex = 2;
+            this.scoreLabel.Text = "0 0 0";
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 399);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.scoreLabel);
+            this.Controls.Add(this.scoreLabelText);
             this.Controls.Add(this.restart);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button6);
@@ -157,6 +180,7 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Game";
             this.Text = "Game";
             this.ResumeLayout(false);
@@ -176,6 +200,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button restart;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label scoreLabelText;
+        private System.Windows.Forms.Label scoreLabel;
     }
 }

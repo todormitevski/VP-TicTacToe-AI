@@ -74,6 +74,7 @@ namespace TicTacToe
             this.btnVsPlayer.TabIndex = 1;
             this.btnVsPlayer.Text = "Play vs Player";
             this.btnVsPlayer.UseVisualStyleBackColor = true;
+            this.btnVsPlayer.Click += new System.EventHandler(this.btnVsPlayer_Click);
             this.btnVsPlayer.MouseEnter += new System.EventHandler(this.buttonsContainer_MouseEnter);
             this.btnVsPlayer.MouseLeave += new System.EventHandler(this.buttonsContainer_MouseLeave);
             // 
@@ -128,6 +129,7 @@ namespace TicTacToe
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicTacToe";

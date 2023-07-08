@@ -58,11 +58,11 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Options.cs">
+    <Compile Include="PlayerVsPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Options.Designer.cs">
-      <DependentUpon>Options.cs</DependentUpon>
+    <Compile Include="PlayerVsPlayer.Designer.cs">
+      <DependentUpon>PlayerVsPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +72,8 @@
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Options.resx">
-      <DependentUpon>Options.cs</DependentUpon>
+    <EmbeddedResource Include="PlayerVsPlayer.resx">
+      <DependentUpon>PlayerVsPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -115,6 +115,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnHoverBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click1.wav" />
+    <None Include="Resources\click.wav" />
+    <Content Include="tictactoe.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
