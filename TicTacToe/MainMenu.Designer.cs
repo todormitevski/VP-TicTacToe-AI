@@ -49,7 +49,7 @@ namespace TicTacToe
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(96, 74);
+            this.label1.Location = new System.Drawing.Point(76, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(333, 54);
             this.label1.TabIndex = 0;
@@ -121,9 +121,9 @@ namespace TicTacToe
             // musicOffBtn
             // 
             this.musicOffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.musicOffBtn.Location = new System.Drawing.Point(245, 410);
+            this.musicOffBtn.Location = new System.Drawing.Point(144, 262);
             this.musicOffBtn.Name = "musicOffBtn";
-            this.musicOffBtn.Size = new System.Drawing.Size(227, 38);
+            this.musicOffBtn.Size = new System.Drawing.Size(197, 38);
             this.musicOffBtn.TabIndex = 1;
             this.musicOffBtn.Text = "Music OFF";
             this.musicOffBtn.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@ namespace TicTacToe
             // musicOnBtn
             // 
             this.musicOnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.musicOnBtn.Location = new System.Drawing.Point(23, 410);
+            this.musicOnBtn.Location = new System.Drawing.Point(144, 203);
             this.musicOnBtn.Name = "musicOnBtn";
             this.musicOnBtn.Size = new System.Drawing.Size(197, 38);
             this.musicOnBtn.TabIndex = 1;
@@ -177,10 +177,11 @@ namespace TicTacToe
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TicTacToe";
+            this.Text = "Tic Tac Toe";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

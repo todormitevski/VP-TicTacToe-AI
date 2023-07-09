@@ -46,3 +46,16 @@ C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.c
 C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.pdb
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\bin\Debug\TicTacToe.exe.config
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\bin\Debug\TicTacToe.exe
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\bin\Debug\TicTacToe.pdb
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.csproj.AssemblyReference.cache
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.csproj.SuggestedBindingRedirects.cache
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.Game.resources
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.MainMenu.resources
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.PlayerVsPlayer.resources
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.exe
+E:\Visual Studio Code\.NET PROGRAMS\clonedProj\TicTacToe\obj\Debug\TicTacToe.pdb

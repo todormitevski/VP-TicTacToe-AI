@@ -22,8 +22,8 @@ namespace TicTacToe
 
         Dictionary<int, Button> boardButton = new Dictionary<int, Button>();
 
-        static char player = 'O';
-        static char computer = 'X';
+        static char player1 = 'O';
+        static char player2 = 'X';
 
         List<Button> buttons;
         private char[] butonot;
@@ -41,7 +41,6 @@ namespace TicTacToe
             InitializeComponent();
             turnLabel.Text = "Turn: Player 1 (O)";
 
-
             boardButton.Add(1, button1);
             boardButton.Add(2, button2);
             boardButton.Add(3, button3);
@@ -52,9 +51,8 @@ namespace TicTacToe
             boardButton.Add(8, button8);
             boardButton.Add(9, button9);
 
+            this.MaximizeBox = false;
         }
-
-
 
         public bool SpaceIsFree(int position)
         {
@@ -67,18 +65,14 @@ namespace TicTacToe
 
         public void InsertLetter(char letter, int position)
         {
-
             if (SpaceIsFree(position))
             {
                 board[position] = letter;
                 boardButton[position].Text = letter.ToString();
                 boardButton[position].Enabled = false;
 
-
                 if (CheckDraw())
                 {
-
-
                     DialogResult result = MessageBox.Show("Draw! Play again?", "Game Over", MessageBoxButtons.OKCancel);
                     if (result == DialogResult.OK)
                         restartGame();
@@ -106,7 +100,6 @@ namespace TicTacToe
                     }
                 }
             }
-           
         }
 
 
@@ -147,7 +140,6 @@ namespace TicTacToe
             {
                 turnLabel.Text = "Turn: Player 2 (X)";
 
-
                 var button = (Button)sender;
 
                 butonot = button.Name.ToCharArray();
@@ -155,8 +147,7 @@ namespace TicTacToe
                 button.BackColor = Color.MediumPurple;
                 button.Text = "O";
                 button.Enabled = false;
-                InsertLetter(player, position);
-               
+                InsertLetter(player1, position);
                
                 Player1Turn = false;
             }
@@ -170,22 +161,12 @@ namespace TicTacToe
                 button.BackColor = Color.Green;
                 button.Text = "X";
                 button.Enabled = false;
-                InsertLetter(computer, position);
+                InsertLetter(player2, position);
                 
-
                 Player1Turn = true;
 
             }
-
-
-
-
-
-
         }
-
-     
-
 
         private void restartGame()
         {
@@ -210,8 +191,6 @@ namespace TicTacToe
         {
             restartGame();
         }
-
-
     }
 }
 

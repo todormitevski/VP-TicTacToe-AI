@@ -22,6 +22,7 @@ namespace TicTacToe
         {
             InitializeComponent();
             playBgMusic();
+            this.MaximizeBox = false;
         }
 
         public void playBgMusic()
@@ -74,6 +75,7 @@ namespace TicTacToe
 
         private void btnOptions_Click(object sender, EventArgs e)
         {
+            this.Text = "Options";
             btnVsCpu.Visible  = false;
             btnVsPlayer.Visible = false;
             btnOptions.Visible = false;
@@ -86,6 +88,7 @@ namespace TicTacToe
 
         private void back(object sender, EventArgs e)
         {
+            this.Text = "Tic Tac Toe";
             btnVsCpu.Visible = true;
             btnVsPlayer.Visible = true;
             btnOptions.Visible = true;

@@ -182,7 +182,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Game";
-            this.Text = "Game";
+            this.Text = "Tic Tac Toe: Player vs CPU";
             this.ResumeLayout(false);
             this.PerformLayout();
 

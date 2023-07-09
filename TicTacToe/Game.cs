@@ -15,13 +15,11 @@ namespace TicTacToe
     public partial class Game : Form
     {
         System.Media.SoundPlayer playerSound = new System.Media.SoundPlayer(Resources.click1);
-
         public int PlayerScore { get; set; } = 0;
         public int ComputerScore { get; set; } = 0;
         public int Draws { get; set; } = 0;
-
         public bool isSpaceFree { get; set; } = false;
-        public bool PlayerTurn { get; set; } = true;
+
         Dictionary<int, char> board = new Dictionary<int, char>
         {
             { 1, ' ' }, { 2, ' ' }, { 3, ' ' },
@@ -57,7 +55,9 @@ namespace TicTacToe
             boardButton.Add(6, button6);
             boardButton.Add(7, button7);
             boardButton.Add(8, button8);
-            boardButton.Add(9, button9);  
+            boardButton.Add(9, button9);
+
+            this.MaximizeBox = false;
         }
 
         public bool SpaceIsFree(int position)
@@ -70,21 +70,15 @@ namespace TicTacToe
 
         public void InsertLetter(char letter, int position)
         {
-
             if (SpaceIsFree(position))
             {
                 board[position] = letter;
                 boardButton[position].Text = letter.ToString();
-                
-                
                 boardButton[position].Enabled = false;
                 isSpaceFree = true;
 
-
                 if (CheckDraw())
                 {
-                    
-
                     DialogResult result = MessageBox.Show("Draw! Play again?", "Game Over", MessageBoxButtons.OKCancel);
                     if (result == DialogResult.OK)
                         restartGame();
@@ -92,10 +86,6 @@ namespace TicTacToe
                         Close();
 
                     scoreLabel.Text = $"{PlayerScore} {++Draws} {ComputerScore}";
-
-
-
-
                 }
 
                 if (CheckWin())
@@ -109,8 +99,6 @@ namespace TicTacToe
                             Close();
 
                         scoreLabel.Text = $"{PlayerScore} {Draws}   {++ComputerScore}";
-                        
-
                     }
                     else
                     {
@@ -120,14 +108,10 @@ namespace TicTacToe
                         else
                             Close();
 
-
                         scoreLabel.Text = $"{++PlayerScore} {Draws}   {++ComputerScore}";
-
-
                     }
                 }
             }
-       
         }
 
 
@@ -173,7 +157,6 @@ namespace TicTacToe
             {
                 int bestScore = int.MinValue;
 
-                // Create a copy of the keys
                 var keys = new List<int>(board.Keys);
 
                 foreach (var key in keys)
@@ -195,7 +178,6 @@ namespace TicTacToe
             {
                 int bestScore = int.MaxValue;
 
-                // Create a copy of the keys
                 var keys = new List<int>(board.Keys);
 
                 foreach (var key in keys)
@@ -233,10 +215,6 @@ namespace TicTacToe
             return false;
         }
 
-        int j= 0;
-
-        int i = 0;
-
         private void PlayerMove(object sender, MouseEventArgs e)
         {     
             var button = (Button)sender;
@@ -249,11 +227,8 @@ namespace TicTacToe
             playerSound.Play();
             InsertLetter(player, position);
 
-
-               if(isSpaceFree)
-                    ComputerMove();
-
-
+            if(isSpaceFree)
+                ComputerMove();
         }
 
         public void ComputerMove()
@@ -261,7 +236,6 @@ namespace TicTacToe
             int bestScore = -800;
             int bestMove = 0;
 
-            // Create a copy of the keys
             var keys = new List<int>(board.Keys);
 
             foreach (var key in keys)
@@ -283,14 +257,13 @@ namespace TicTacToe
             boardButton[bestMove].BackColor = Color.Red;
 
             InsertLetter(computer, bestMove);
-
-
         }
 
 
         private void restartGame()
         {
             buttons = new List<Button> { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+
             foreach (Button button in buttons)
             {
                 button.Enabled = true;
@@ -302,7 +275,7 @@ namespace TicTacToe
             {
                 board[key] = ' ';
             }
-            i = 0;
+
             isSpaceFree  = false;
             EnableAllButtons();
         }
@@ -315,8 +288,6 @@ namespace TicTacToe
             ComputerScore = 0;
             scoreLabel.Text = $"{PlayerScore} {Draws} {ComputerScore}";
         }
-
-       
     }
 }
 

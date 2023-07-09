@@ -170,7 +170,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlayerVsPlayer";
-            this.Text = "Tic Tac Toe: Player VS Player";
+            this.Text = "Tic Tac Toe: Player vs Player";
             this.ResumeLayout(false);
             this.PerformLayout();
 
