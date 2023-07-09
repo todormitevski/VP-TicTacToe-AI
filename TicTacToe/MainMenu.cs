@@ -50,19 +50,50 @@ namespace TicTacToe
         private void btnVsCpu_Click(object sender, EventArgs e)
         {
             Game game = new Game();
-            if(game.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            game.ShowDialog();
         }
 
         private void btnVsPlayer_Click(object sender, EventArgs e)
         {
             PlayerVsPlayer PVP = new PlayerVsPlayer();
-            if(PVP.ShowDialog() == DialogResult.OK)
-            {
+            PVP.ShowDialog();
+        }
 
-            }
+
+
+        private void musicOff(object sender, EventArgs e)
+        {
+            player.Stop();
+        }
+
+        private void musicOn(object sender, EventArgs e)
+        {
+            player.PlayLooping();
+        }
+
+
+        private void btnOptions_Click(object sender, EventArgs e)
+        {
+            btnVsCpu.Visible  = false;
+            btnVsPlayer.Visible = false;
+            btnOptions.Visible = false;
+            btnExit.Visible = false;
+
+            musicOffBtn.Visible = true; 
+            musicOnBtn.Visible = true;
+            backBtn.Visible = true;
+        }
+
+        private void back(object sender, EventArgs e)
+        {
+            btnVsCpu.Visible = true;
+            btnVsPlayer.Visible = true;
+            btnOptions.Visible = true;
+            btnExit.Visible = true;
+
+            musicOffBtn.Visible = false;
+            musicOnBtn.Visible = false;
+            backBtn.Visible = false;
         }
     }
 }

@@ -38,6 +38,9 @@ namespace TicTacToe
             this.btnOptions = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.musicOffBtn = new System.Windows.Forms.Button();
+            this.musicOnBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +90,7 @@ namespace TicTacToe
             this.btnOptions.TabIndex = 1;
             this.btnOptions.Text = "Options";
             this.btnOptions.UseVisualStyleBackColor = true;
+            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             this.btnOptions.MouseEnter += new System.EventHandler(this.buttonsContainer_MouseEnter);
             this.btnOptions.MouseLeave += new System.EventHandler(this.buttonsContainer_MouseLeave);
             // 
@@ -114,6 +118,48 @@ namespace TicTacToe
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // musicOffBtn
+            // 
+            this.musicOffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.musicOffBtn.Location = new System.Drawing.Point(245, 410);
+            this.musicOffBtn.Name = "musicOffBtn";
+            this.musicOffBtn.Size = new System.Drawing.Size(227, 38);
+            this.musicOffBtn.TabIndex = 1;
+            this.musicOffBtn.Text = "Music OFF";
+            this.musicOffBtn.UseVisualStyleBackColor = true;
+            this.musicOffBtn.Visible = false;
+            this.musicOffBtn.Click += new System.EventHandler(this.musicOff);
+            this.musicOffBtn.MouseEnter += new System.EventHandler(this.buttonsContainer_MouseEnter);
+            this.musicOffBtn.MouseLeave += new System.EventHandler(this.buttonsContainer_MouseLeave);
+            // 
+            // musicOnBtn
+            // 
+            this.musicOnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.musicOnBtn.Location = new System.Drawing.Point(23, 410);
+            this.musicOnBtn.Name = "musicOnBtn";
+            this.musicOnBtn.Size = new System.Drawing.Size(197, 38);
+            this.musicOnBtn.TabIndex = 1;
+            this.musicOnBtn.Text = "Music ON";
+            this.musicOnBtn.UseVisualStyleBackColor = true;
+            this.musicOnBtn.Visible = false;
+            this.musicOnBtn.Click += new System.EventHandler(this.musicOn);
+            this.musicOnBtn.MouseEnter += new System.EventHandler(this.buttonsContainer_MouseEnter);
+            this.musicOnBtn.MouseLeave += new System.EventHandler(this.buttonsContainer_MouseLeave);
+            // 
+            // backBtn
+            // 
+            this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(129, 461);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(227, 38);
+            this.backBtn.TabIndex = 1;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Visible = false;
+            this.backBtn.Click += new System.EventHandler(this.back);
+            this.backBtn.MouseEnter += new System.EventHandler(this.buttonsContainer_MouseEnter);
+            this.backBtn.MouseLeave += new System.EventHandler(this.buttonsContainer_MouseLeave);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +167,9 @@ namespace TicTacToe
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BackgroundImage = global::TicTacToe.Properties.Resources.bg1;
             this.ClientSize = new System.Drawing.Size(484, 511);
+            this.Controls.Add(this.musicOnBtn);
+            this.Controls.Add(this.backBtn);
+            this.Controls.Add(this.musicOffBtn);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.btnVsPlayer);
@@ -146,6 +195,9 @@ namespace TicTacToe
         private System.Windows.Forms.Button btnOptions;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Button musicOffBtn;
+        private Button musicOnBtn;
+        private Button backBtn;
     }
 }
 

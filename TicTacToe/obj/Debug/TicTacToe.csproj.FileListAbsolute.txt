@@ -33,3 +33,16 @@ C:\Users\blastin\Source\Repos\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\blastin\Source\Repos\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.pdb
 C:\Users\blastin\source\repos\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.Game.resources
 C:\Users\blastin\source\repos\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.PlayerVsPlayer.resources
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\bin\Debug\TicTacToe.exe.config
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\bin\Debug\TicTacToe.exe
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\bin\Debug\TicTacToe.pdb
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.csproj.AssemblyReference.cache
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.csproj.SuggestedBindingRedirects.cache
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.Game.resources
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.MainMenu.resources
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.PlayerVsPlayer.resources
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.exe
+C:\Users\blastin\Desktop\VP REAL\VP-TicTacToe-AI\TicTacToe\obj\Debug\TicTacToe.pdb
